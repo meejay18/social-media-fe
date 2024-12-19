@@ -109,9 +109,10 @@ const Register = () => {
             <HiQuestionMarkCircle />
           </div>
           <div className="flex gap-3">
-            <input type="radio" />
-            <input type="radio" />
-            <input type="radio" />
+            <div className="flex justify-between items-center p-3">
+              Female
+              <input type="radio" />
+            </div>
           </div>
         </div>
       </div>
