@@ -1,5 +1,6 @@
 import React from "react";
 import { HiQuestionMarkCircle } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
@@ -160,7 +161,7 @@ const Register = () => {
             <div className="flex justify-center items-center">
               <div className="mt-3 text-blue-700 cursor-pointer">
                 {" "}
-                Already have an account?
+                <Link to={"/auth/login"}>Already have an account?</Link>
               </div>
             </div>
           </div>
