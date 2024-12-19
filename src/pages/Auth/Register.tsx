@@ -10,9 +10,9 @@ const Register = () => {
             Friends App
           </div>
 
-          <div className="mt-6 w-[32vw] h-full rounded-md bg-white shadow-2xl flex flex-col justify-start items-center p-4">
+          <div className="mt-6 w-[35vw] h-[99vh] rounded-md bg-white shadow-2xl flex flex-col justify-start items-center p-4">
             <div className="font-bold text-3xl">Create a new account</div>
-            <div>It's quick and easy.</div>
+            <div className="text-gray-500">It's quick and easy.</div>
             <div className="border-t w-[32vw] mt-4"></div>
             <div className="flex gap-3 h-[6vh] mt-3">
               <input
@@ -113,15 +113,15 @@ const Register = () => {
               <HiQuestionMarkCircle />
             </div>
             <div className="flex gap-3 mt-2">
-              <div className="flex justify-between items-center border w-[9vw] rounded-md p-3 h-[6vh]">
+              <div className="flex justify-between items-center border w-[10vw] rounded-md p-3 h-[6vh]">
                 <div>Female</div>
                 <input type="radio" />
               </div>
-              <div className="flex justify-between items-center border w-[9vw] rounded-md p-3 h-[6vh]">
+              <div className="flex justify-between items-center border w-[10vw] rounded-md p-3 h-[6vh]">
                 <div>Male</div>
                 <input type="radio" />
               </div>
-              <div className="flex justify-between items-center border w-[9vw] rounded-md p-3 h-[6vh]">
+              <div className="flex justify-between items-center border w-[10vw] rounded-md p-3 h-[6vh]">
                 <div>Custom</div>
                 <input type="radio" />
               </div>
@@ -130,30 +130,27 @@ const Register = () => {
               <input
                 type="text"
                 placeholder="Mobile number or email address"
-                className="w-[29vw] h-[6vh] mt-3 border rounded-md pl-3"
+                className="w-[32vw] h-[6vh] mt-3 border rounded-md pl-3"
               />
             </div>
             <div>
               <input
                 type="text"
                 placeholder="New password"
-                className="w-[29vw] h-[6vh] mt-3 border rounded-md pl-3"
+                className="w-[32vw] h-[6vh] mt-3 border rounded-md pl-3"
               />
             </div>
-            <div className="text-xs mt-5">
+            <div className="text-xs mt-5 text-gray-500">
               People who use our service may have uploaded your contact
               information to Facebook.{" "}
               <span className="text-blue-500 cursor-pointer hover:underline">
                 Learn more.
               </span>
             </div>
-            <div className="text-xs mt-5">
+            <div className="text-xs mt-5 text-gray-500">
               By clicking Sign Up, you agree to our Terms, Privacy Policy and
               Cookies Policy. You may receive SMS notifications from us and can
               opt out at any time.
-              <span className="text-blue-500 cursor-pointer hover:underline">
-                Learn more.
-              </span>
             </div>
             <div className="flex justify-center items-center">
               <button className="font-bold text-xl bg-[#1ea01e] px-14 py-1 rounded-md text-white mt-5">
@@ -169,7 +166,99 @@ const Register = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-[30vh] bg-blue-500 flex justify-center items-center"></div>
+      <footer className="bg-gray-50 py-4 border-t text-sm text-gray-600">
+        {/* Language Links */}
+        <div className="flex justify-center items-center w-full">
+          <div className="flex flex-wrap justify-start text-blue-800 space-x-3 mb-4 text-xs w-[65vw]">
+            <a href="#" className="hover:underline">
+              English (UK)
+            </a>
+            <a href="#" className="hover:underline">
+              Hausa
+            </a>
+            <a href="#" className="hover:underline">
+              Français (France)
+            </a>
+            <a href="#" className="hover:underline">
+              Português (Brasil)
+            </a>
+            <a href="#" className="hover:underline">
+              Español
+            </a>
+            <a href="#" className="hover:underline">
+              العربية
+            </a>
+            <a href="#" className="hover:underline">
+              Bahasa Indonesia
+            </a>
+            <a href="#" className="hover:underline">
+              Deutsch
+            </a>
+            <a href="#" className="hover:underline">
+              日本語
+            </a>
+            <a href="#" className="hover:underline">
+              Italiano
+            </a>
+            <a href="#" className="hover:underline">
+              हिन्दी
+            </a>
+            <button className="bg-gray-100 border-gray-300 border px-2 py-1 rounded-md">
+              +
+            </button>
+          </div>
+        </div>
+        <div className="w-full flex justify-center items-center">
+          <div className="border-t w-[65vw] border"></div>
+        </div>
+        {/* Navigation Links */}
+        <div className="flex w-full h-[15vh] justify-center items-center">
+          <div className="flex flex-wrap w-[65vw] text-blue-800 text-xs h-[10vh] justify-start items-center space-x-4 mb-4">
+            {[
+              "Sign Up",
+              "Log in",
+              "Messenger",
+              "Facebook Lite",
+              "Video",
+              "Places",
+              "Games",
+              "Marketplace",
+              "Meta Pay",
+              "Meta Store",
+              "Meta Quest",
+              "Instagram",
+              "Threads",
+              "Fundraisers",
+              "Services",
+              "Voting Information Centre",
+              "Privacy Policy",
+              "Privacy Centre",
+              "Groups",
+              "About",
+              "Create ad",
+              "Create Page",
+              "Developers",
+              "Careers",
+              "Cookies",
+              "AdChoices",
+              "Terms",
+              "Help",
+              "Contact uploading and non-users",
+            ].map((item) => (
+              <a key={item} href="#" className="hover:underline">
+                {item}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Meta Copyright */}
+        <div className="flex justify-center items-center w-full">
+          <div className=" text-xs text-center text-gray-500 w-[65vw] flex justify-start">
+            Meta © 2024
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
