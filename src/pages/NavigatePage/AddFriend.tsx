@@ -1,7 +1,7 @@
 import React from "react";
 
 const AddFriend = () => {
-  return <div>AddFriend here</div>;
+  return <div>AddFriend</div>;
 };
 
 export default AddFriend;
