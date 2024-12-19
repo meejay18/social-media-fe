@@ -5,6 +5,11 @@ import Register from "../pages/Auth/Register";
 import Login from "../pages/Auth/Login";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import DashboardLayout from "../layouts/DashboardLayout";
+import NavigateAuth from "../layouts/NavigateAuth";
+import AddFriend from "../pages/NavigatePage/AddFriend";
+import Reels from "../pages/NavigatePage/Reels";
+import Notification from "../pages/NavigatePage/Notification";
+import PostImage from "../pages/FetchAPI/PostImage";
 
 export const mainRouter = createBrowserRouter([
   {
@@ -35,5 +40,27 @@ export const mainRouter = createBrowserRouter([
         element: <Dashboard />,
       },
     ],
+  },
+  {
+    path: "/Navigate",
+    element: <NavigateAuth />,
+    children: [
+      {
+        path: "add",
+        element: <AddFriend />,
+      },
+      {
+        path: "reels",
+        element: <Reels />,
+      },
+      {
+        path: "notification",
+        element: <Notification />,
+      },
+    ],
+  },
+  {
+    path: "/create",
+    element: <PostImage />,
   },
 ]);
