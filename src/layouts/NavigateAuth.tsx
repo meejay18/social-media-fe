@@ -1,14 +1,12 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Header from "../Static/Header";
 
-const DashboardLayout = () => {
+const NavigateAuth = () => {
   return (
     <div>
-      <Header />
       <Outlet />
     </div>
   );
 };
 
-export default DashboardLayout;
+export default NavigateAuth;
