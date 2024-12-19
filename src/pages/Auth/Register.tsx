@@ -3,10 +3,10 @@ import { HiQuestionMarkCircle } from "react-icons/hi";
 
 const Register = () => {
   return (
-    <div className="w-full h-screen flex justify-center items-center">
-      <div className="w-[40vw] h-[90vh] flex flex-col justify-start items-center bg-red-500">
+    <div className="w-full h-screen flex justify-center items-center bg-blue-50">
+      <div className="w-[40vw] h-[90vh] flex flex-col justify-start items-center">
         <div>facebook</div>
-        <div className="mt-6 w-[32vw] h-[85vh] rounded-md bg-lime-500 flex flex-col justify-start items-center p-4">
+        <div className="mt-6 w-[32vw] h-[85vh] rounded-md bg-white shadow-2xl flex flex-col justify-start items-center p-4">
           <div className="font-bold text-3xl">Create a new account</div>
           <div>It's quick and easy.</div>
           <div className="border-t w-[32vw] mt-4"></div>
@@ -14,12 +14,12 @@ const Register = () => {
             <input
               type="text"
               placeholder="First name"
-              className="pl-3 rounded-md"
+              className="pl-3 rounded-md border"
             />
             <input
               type="text"
               placeholder="Surname"
-              className="pl-3 rounded-md"
+              className="pl-3 rounded-md border"
             />
           </div>
           <div className="flex items-center justify-start w-full mt-2 text-sm gap-1">
