@@ -26,8 +26,8 @@ const Register = () => {
                 className="pl-3 rounded-md border"
               />
             </div>
-            <div className="flex items-center justify-start w-full mt-2 text-sm gap-1">
-              <div>Date of birth</div>
+            <div className="text-gray-500 flex items-center justify-start w-full mt-2 text-sm gap-1">
+              <div className="text-xs text-gray-500">Date of birth</div>
               <HiQuestionMarkCircle />
             </div>
             <div className="flex gap-3 mt-2">
