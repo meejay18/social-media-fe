@@ -5,7 +5,10 @@ const Register = () => {
   return (
     <div className="w-full h-screen flex justify-center items-center bg-blue-50">
       <div className="w-[40vw] h-[90vh] flex flex-col justify-start items-center">
-        <div>facebook</div>
+        <div className="text-5xl font-extrabold font-sans text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-purple-500 to-blue-500 drop-shadow-lg animate-pulse">
+          Friends App
+        </div>
+
         <div className="mt-6 w-[32vw] h-[85vh] rounded-md bg-white shadow-2xl flex flex-col justify-start items-center p-4">
           <div className="font-bold text-3xl">Create a new account</div>
           <div>It's quick and easy.</div>
@@ -109,8 +112,16 @@ const Register = () => {
             <HiQuestionMarkCircle />
           </div>
           <div className="flex gap-3">
-            <div className="flex justify-between items-center p-3">
-              Female
+            <div className="flex justify-between items-center border w-[9vw] rounded-md p-3 h-[6vh]">
+              <div>Female</div>
+              <input type="radio" />
+            </div>
+            <div className="flex justify-between items-center border w-[9vw] rounded-md p-3 h-[6vh]">
+              <div>Male</div>
+              <input type="radio" />
+            </div>
+            <div className="flex justify-between items-center border w-[9vw] rounded-md p-3 h-[6vh]">
+              <div>Custom</div>
               <input type="radio" />
             </div>
           </div>
