@@ -1,12 +1,19 @@
 import React, { useState } from "react";
+import { MdPerson } from "react-icons/md";
 
 const SignUp = () => {
+  const [avatar, setAvatar] = useState<string>("");
+  const [myImage, setMyImage] = useState<string>("");
+
+  const handleImage = (e: any) => {
+    let file = e.target.files[0];
+    setAvatar(file);
+    setMyImage(URL.createObjectURL(file));
+  };
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
-    avatar: "",
-    avatarID: "",
   });
 
   const handleChange = (e: any) => {
@@ -20,13 +27,37 @@ const SignUp = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center flex-col">
+      <div className="flex mb-10 bg-white">
+        <div className="flex items-center border justify-center h-[55px] w-[225px] text-[20px] hover:bg-black hover:text-white transition-all duration-300 cursor-pointer ">
+          <div className="h-full border-r flex justify-center items-center">
+            <MdPerson className="mr-5" />
+          </div>
+          <label
+            htmlFor="avatar"
+            className="uppercase font-semibold ml-5 text-[14px]"
+          >
+            Upload Avatar
+          </label>
+          <input
+            id="avatar"
+            type="file"
+            accept="image/*"
+            className="hidden"
+            onChange={handleImage}
+          />
+        </div>
+        {myImage && (
+          <div className="h-[55px] w-[55px] border-y border-r">
+            <img src={myImage} className="h-full object-cover" />
+          </div>
+        )}
+      </div>
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <h2 className="text-2xl font-bold text-center text-blue-600 mb-6">
           Create an Account
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Name Field */}
           <div>
             <label
               htmlFor="name"
@@ -46,7 +77,6 @@ const SignUp = () => {
             />
           </div>
 
-          {/* Email Field */}
           <div>
             <label
               htmlFor="email"
@@ -66,7 +96,6 @@ const SignUp = () => {
             />
           </div>
 
-          {/* Password Field */}
           <div>
             <label
               htmlFor="password"
@@ -86,7 +115,6 @@ const SignUp = () => {
             />
           </div>
 
-          {/* Submit Button */}
           <div>
             <button
               type="submit"
@@ -97,11 +125,10 @@ const SignUp = () => {
           </div>
         </form>
 
-        {/* Footer */}
         <div className="mt-6 text-center text-sm text-gray-600">
           Already have an account?{" "}
           <a
-            href="/login"
+            href="/auth/login"
             className="text-blue-600 font-medium hover:underline"
           >
             Log In
