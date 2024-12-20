@@ -1,26 +1,5 @@
 import axios from "axios";
-const url: string = `http://localhost:2244`;
-
-export const createAccount = (data: any) => {
-  try {
-    return fetch(`${url}/api/register`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-
-      body: data,
-    })
-      .then((res) => {
-        return res.json();
-      })
-      .then((res) => {
-        return res;
-      });
-  } catch (error) {
-    console.log(error);
-  }
-};
+const url: string = `https://socialmedia-application-h0ft.onrender.com`;
 
 export const createUserAccount = (data: any) => {
   try {
@@ -30,7 +9,7 @@ export const createUserAccount = (data: any) => {
       },
     };
     return axios
-      .post(`${url}/api/register`, data, config)
+      .post(`${url}/api/user/create-user`, data, config)
 
       .then((res) => {
         return res?.data;
@@ -40,23 +19,13 @@ export const createUserAccount = (data: any) => {
   }
 };
 
-export const loginAccount = (data: any) => {
+export const LoginUser = async (data: any) => {
   try {
-    return fetch(`${url}/api/login`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => {
-        return res.json();
-      })
-      .then((res) => {
-        return res;
-      });
+    return await axios.post(`${url}/api/user/login-user`, data).then((res) => {
+      return res.data;
+    });
   } catch (error) {
-    console.log(error);
+    return error;
   }
 };
 
