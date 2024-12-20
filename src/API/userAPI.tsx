@@ -59,3 +59,23 @@ export const loginAccount = (data: any) => {
     console.log(error);
   }
 };
+
+export const getUsers = async () => {
+  try {
+    return await axios.get(`${url}/users/`).then((res) => {
+      return res.data.data;
+    });
+  } catch (error) {
+    return error;
+  }
+};
+
+export const getUser = async (userID: any) => {
+  try {
+    return await axios.get(`${URL}/one-user/${userID}`).then((res) => {
+      return res.data.data;
+    });
+  } catch (error) {
+    return error;
+  }
+};
