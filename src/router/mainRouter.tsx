@@ -22,7 +22,8 @@ export const mainRouter = createBrowserRouter([
     element: <AuthLayout />,
     children: [
       {
-        path: "register",
+        // path: "",
+        index: true,
         element: <Register />,
       },
       {

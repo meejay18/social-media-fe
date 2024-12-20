@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL = "http://localhost:8090/api";
+const URL = "https://socialmedia-application-h0ft.onrender.com/";
 
 export const createPost = async (userID: string, data: any) => {
   try {
@@ -10,7 +10,7 @@ export const createPost = async (userID: string, data: any) => {
       },
     };
     return await axios
-      .post(`${URL}/create-post/${userID}`, data, config)
+      .post(`${URL}/api/post/create-post/${userID}`, data, config)
       .then((res) => {
         return res.data;
       });
@@ -21,9 +21,11 @@ export const createPost = async (userID: string, data: any) => {
 
 export const readPost = async (userID: string) => {
   try {
-    return await axios.get(`${URL}/read-post/${userID}`).then((res) => {
-      return res.data;
-    });
+    return await axios
+      .get(`${URL}/api/post/read-post/${userID}`)
+      .then((res) => {
+        return res.data;
+      });
   } catch (error) {
     return error;
   }
