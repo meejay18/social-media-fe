@@ -15,12 +15,12 @@ const HomePage = () => {
       </div>
       <div>
         <button className="py-2 px-2 bg-[#0080FF] animate-pulse text-[white] mt-2 rounded-md">
-          <Link to={"/login"}>Log In</Link>
+          <Link to={"/auth/login"}>Log In</Link>
         </button>
       </div>
       <div className="w-[300px] justify-center flex mt-2 ">
         Dont have an account?{" "}
-        <Link to={"/register"}>
+        <Link to={"/auth/register"}>
           <p className="underline"> Sign Up</p>
         </Link>
       </div>
